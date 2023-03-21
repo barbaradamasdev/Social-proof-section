@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    /* Primary color */
+    --pinkMagenta: hsl(300, 43%, 22%);
+    --softPint: hsl(333, 80%, 67%);
+    
+    /* Neutral color */
+    --darkMagenta: hsl(303, 10%, 53%);
+    --lightMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    height: 100vh;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: -335px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    width: 1100px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentation {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.leftContent, .rightContent {
+    width: 550px; /* ou 50% */
+}
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 100px;
+}
+
+h1, p {
+    color: var(--pinkMagenta);
+}
+
+h1 {font-size: 54px;}
+
+p {font-size: 18px;}
+.opacity {opacity: 80%;}
+
+.apresentationText {
+    line-height: 25px;
+    padding-right: 25px;
+}
+
+.review {
+    display: flex;
+    margin: 10px 15px;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.first, .second, .third {
+    background-color: var(--lightMagenta);
+    padding: 17px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.first {left: -70px;}
+.second {left: -25px;}
+.third {left: 20px;}
+
+
+.rightContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    font-weight: 700;
+}
+
+.depoiments {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+}
+
+.depoiment {
+    color: var(--white);
+    background-color: var(--pinkMagenta);
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.one, .two, .three {
+   position: relative; 
+   
+}
+
+.one {top: 310px;}
+.two {top: 325px;}
+.three {top: 340px;}
+
+.cardUp {
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    gap: 20px;
+}
+
+.picture {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 700;
+    padding: 3px 0;
+}
+
+.space {
+    width: 90px;
+}
+
+.verification {
+    color: var(--softPint);
+    opacity: 80%;
+    margin: 5px 0;
+}
+
+.text {
+    line-height: 20px;
+    padding: 25px 0 5px 0;
+}
+
+@media (max-width: 375px) {
+    * {
+        margin: 0;
+        scroll-behavior: initial;
+    }
+    
+    .content {
+        text-align: center;
+        top: 0;
+        position: static;
+        display: block;
+        padding: 90px 20px;
+    }
+    
+    .leftContent, .rightContent {
+        padding: 0;
+        width: 335px;
+    }
+    
+    
+    .first, .second, .third {    
+        left: 0;
+    } 
+    
+    h1 {font-size: 38px;}
+    .apresentation {flex-direction: column; padding: 0; width: 100vw;}   
+    .apresentationText {padding: 0px;}
+    
+    .review {
+        flex-direction: column; 
+        gap: 15px; margin: 
+        10px 0px; 
+        align-items: center;
+    }
+    
+    .depoiments {
+        flex-direction: column;
+        gap: 15px;
+        margin: 30px 15px;
+        left: 0;
+    }
+
+    .space {width: 60px;}
+    .text {text-align: left;}
+    
+    .depoiment {
+        padding: 40px 25px;
+    }
+
+    .one, .two, .three {
+        top: 0;
+    }
+}
+
+.attribution {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 50%;
+    padding: 10px;
+}
